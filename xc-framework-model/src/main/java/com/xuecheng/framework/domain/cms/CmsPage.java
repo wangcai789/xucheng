@@ -1,5 +1,6 @@
 package com.xuecheng.framework.domain.cms;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
@@ -22,6 +23,7 @@ public class CmsPage {
      * 页面名称、别名、访问地址、类型（静态/动态）、页面模版、状态
      */
     //站点ID
+    @ApiModelProperty("站点ID")
     private String siteId;
     //页面ID
     @Id
@@ -29,6 +31,7 @@ public class CmsPage {
     //页面名称
     private String pageName;
     //别名
+    @ApiModelProperty("pageAliase")
     private String pageAliase;
     //访问地址
     private String pageWebPath;
@@ -39,6 +42,7 @@ public class CmsPage {
     //类型（静态/动态）
     private String pageType;
     //页面模版
+    @ApiModelProperty("pageTemplate")
     private String pageTemplate;
     //页面静态化内容
     private String pageHtml;
